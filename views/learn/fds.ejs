@@ -1,0 +1,196 @@
+<% layout("layouts/boilerplate") %>
+    <!-- <h1>Learn FDs and Post schemes...</h1> -->
+<section class="fd-section">
+  <div class="fd-container">
+
+    <!-- Left: Content -->
+    <div class="fd-content">
+      <h2>What are Fixed Deposits?</h2>
+
+      <p>
+        A Fixed Deposit (FD) is one of the safest investment options available.
+        You invest a lump sum for a fixed period at a pre-decided interest rate,
+        and receive guaranteed returns at maturity.
+      </p>
+
+      <p>
+        FDs are designed for capital protection rather than aggressive growth.
+        They are widely used by individuals who prefer stability, predictability,
+        and peace of mind over high-risk returns.
+      </p>
+
+      <ul>
+        <li><strong>Safety:</strong> Minimal risk, especially with banks and post offices</li>
+        <li><strong>Guaranteed Returns:</strong> Interest rate is fixed at the time of investment</li>
+        <li><strong>Capital Protection:</strong> Your principal remains secure</li>
+      </ul>
+
+      <p class="text-muted">
+        FDs form the foundation of a conservative investment strategy.
+      </p>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="fd-visual">
+      <img 
+        src="https://www.livemint.com/lm-img/img/2024/05/24/600x338/Picture10_1709907744038_1716522468732.png" 
+        alt="Fixed Deposit Safety Illustration"
+      >
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<!-- 2nd section -->
+<section class="fd-section reverse">
+
+  <div class="fd-visual">
+    <img 
+      src="https://cwmindia.com/wp-content/uploads/2024/02/Picture2.png"
+      alt="Types of Fixed Deposit Schemes"
+    />
+  </div>
+
+  <div class="fd-content">
+    <h2>Types of Fixed Deposit Schemes</h2>
+
+    <p>
+      Fixed Deposits are not one-size-fits-all. Banks and institutions offer
+      multiple FD variants based on how interest is paid, liquidity needs,
+      and flexibility requirements.
+    </p>
+
+    <ul>
+      <li><strong>Bank Fixed Deposits:</strong> Standard FDs with flexible tenures and predictable returns.</li>
+
+      <li><strong>Post Office Fixed Deposits:</strong> Government-backed FDs known for safety and stability.</li>
+
+      <li><strong>Tax-Saving Fixed Deposits:</strong> 5-year lock-in FDs offering tax benefits under Section 80C.</li>
+
+      <li><strong>Senior Citizen Fixed Deposits:</strong> Higher interest rates for individuals aged 60+.</li>
+
+      <li><strong>Cumulative Fixed Deposits:</strong> Interest compounds and is paid at maturity — ideal for growth.</li>
+
+      <li><strong>Non-Cumulative Fixed Deposits:</strong> Periodic payouts — suitable for regular income needs.</li>
+
+      <li><strong>Flexi Fixed Deposits:</strong> Savings + FD combo with automatic conversion of excess balance.</li>
+
+      <li><strong>Sweep-in Fixed Deposits:</strong> Excess savings swept into FD while allowing easy withdrawals.</li>
+    </ul>
+
+    <p class="text-muted">
+      Choosing the right FD depends on whether your priority is growth, income, or liquidity.
+    </p>
+  </div>
+
+</section>
+
+<hr>
+<!-- 3rd section -->
+<section class="fd-section fd-visual-break">
+  <div class="fd-break-container">
+
+    <h2 class="fd-break-title">
+      How Fixed Deposit Investing Works
+    </h2>
+
+    <img
+      src="https://cwmindia.com/wp-content/uploads/2024/02/Picture1.png"
+      alt="FD investment flow illustration"
+      class="fd-break-image"
+    />
+        
+  </div>
+</section>
+
+<hr>
+<section class="fd-section calculator-section">
+  <div class="calc-card">
+    <div class="calc-left">
+      <h2 class="calc-title">FD Calculator</h2>
+      
+      <div class="input-group-row">
+        <div class="input-box">
+          <label>Fixed Deposit amount</label>
+          <div class="input-wrapper">
+            <span>₹</span>
+            <input type="number" id="principal" value="100000">
+          </div>
+        </div>
+        
+        <div class="input-box">
+          <label>Rate of Interest</label>
+          <div class="input-wrapper">
+            <input type="number" id="rate" value="8">
+            <span>%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group-row">
+        <div class="input-box">
+          <label>Fixed Deposit Tenure</label>
+          <div class="input-wrapper">
+            <input type="number" id="tenure" value="3">
+          </div>
+        </div>
+        <div class="input-box">
+          <label>&nbsp;</label>
+          <select id="tenurePeriod">
+            <option value="years">Years</option>
+            <option value="months">Months</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculateFD()">Calculate</button>
+    </div>
+
+    <div class="calc-right">
+      <div class="result-item">
+        <p>Maturity Amount</p>
+        <h3 id="maturity-amount">₹1,26,824</h3>
+      </div>
+      <div class="result-item">
+        <p>Total Interest amount</p>
+        <h4 id="interest-amount">₹26,824</h4>
+      </div>
+      <div class="result-item">
+        <p>Principal Amount</p>
+        <h4 id="principal-display">₹1,00,000</h4>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+ <div class="mt-5 p-4 border rounded text-center next-step">
+        <h4 class="fw-semibold">Next Step: Mutual Funds</h4>
+        <p class="text-muted mt-2">
+        Shift from saving to growing by leveraging market opportunities through professional fund management and diversification.
+            </p>
+        <a href="/learn/mfs" class="btn btn-dark mt-3">
+            Continue to Mutual Funds →
+        </a>
+  </div>
+  
+  
+<script>
+function calculateFD() {
+  const p = parseFloat(document.getElementById('principal').value);
+  const r = parseFloat(document.getElementById('rate').value) / 100;
+  const t = parseFloat(document.getElementById('tenure').value);
+  
+  // Quarterly compounding (standard for Indian Banks)
+  const n = 4; 
+  const amount = p * Math.pow((1 + r/n), (n * t));
+  const interest = amount - p;
+
+  document.getElementById('maturity-amount').innerText = "₹" + Math.round(amount).toLocaleString('en-IN');
+  document.getElementById('interest-amount').innerText = "₹" + Math.round(interest).toLocaleString('en-IN');
+  document.getElementById('principal-display').innerText = "₹" + p.toLocaleString('en-IN');
+}
+</script>
+

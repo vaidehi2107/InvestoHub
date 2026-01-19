@@ -1,0 +1,314 @@
+<% layout("layouts/boilerplate") %>
+
+<section class="fd-section">
+  <div class="fd-container">
+
+    <!-- Left: Content -->
+    <div class="fd-content">
+     <h2>Introduction to Mutual Funds</h2>
+
+        <p>
+        Mutual Funds allow you to invest in the market without picking individual stocks.
+        Your money is pooled with other investors and managed by professional fund managers
+        who invest across equities, debt, or a mix of both.
+        </p>
+
+        <p>
+        They are designed for long-term wealth creation and disciplined investing.
+        By spreading investments across multiple assets, mutual funds help reduce risk
+        while aiming for steady growth over time.
+        </p>
+
+        <ul>
+        <li><strong>Diversification:</strong> Your investment is spread across multiple securities</li>
+        <li><strong>Professional Management:</strong> Funds are managed by experienced experts</li>
+        <li><strong>Accessibility:</strong> Start investing with small amounts through SIPs</li>
+        </ul>
+
+        <p class="text-muted">
+        Mutual funds balance risk and growth, making them suitable for most long-term investors.
+        </p>
+
+    </div>
+
+    <!-- Right: Image -->
+    <div class="fd-visual">
+      <img 
+        src="https://assets.entrepreneur.com/content/3x2/2000/20190927120434-mutualfund.jpeg" 
+        alt="Mutual Funds Illustration"
+      > 
+     
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- 2nd section -->
+<section class="fd-section reverse">
+
+  <div class="fd-visual">
+    <img 
+      src="https://unacademy.com/content/wp-content/uploads/sites/2/2022/11/seo10.jpg"
+      alt="Types of Mutual Funds"
+    />
+  </div>
+
+  <div class="fd-content">
+    <h2>Types of Mutual Funds</h2>
+
+    <h5>Types of Fund Based on Asset Class</h5>
+    <ul>
+      <li><strong>Debt Funds:</strong> They are  also known as fixed income funds. Investment in this fund takes place in assets like government securities and corporate bonds.</li>
+
+      <li><strong>Equity Funds:</strong> Investment in these funds takes place in company stocks which have a higher degree of  risks.</li>
+
+      <li><strong>Hybrid Funds:</strong> Hybrid funds invest in a mix of both equity and fixed income securities.</li>
+    </ul>
+    <hr>
+    <h5>Types of Fund Based on Structure</h5>
+    <ul>
+      <li><strong>Open-ended Fund:</strong> These funds allow investors to trade funds at their convenience and exit when required at the prevailing NAV (Net Asset Value). These are highly liquid funds because an investor can redeem the units invested in any business day. </li>
+
+      <li><strong>Close-ended Fund:</strong> These funds come with a pre-defined maturity period. Investors can invest in the fund only when it is launched and can withdraw their money from the fund only at the time of maturity. </li>
+    </ul>
+    <hr>
+    <h5>Types of Fund Based on Investment Objective</h5>
+    <ul>
+      <li><strong>Growth Fund:</strong> hese funds can be relatively more risky due to high exposure to equity and hence it is good to invest in them for the long-term.</li>
+
+      <li><strong>Income Fund:</strong> These are debt funds that invest mostly in bonds, government securities and Certificate of Deposits, etc. They are suitable for different term goals and for investors with a lower-risk appetite.</li>
+
+      <li><strong>Liquid Fund:</strong> Liquid funds put money in short-term money market instruments like treasury bills, Certificate of Deposits (CDs), term deposits, commercial papers.</li>
+
+      <li><strong>Tax Saving Fund:</strong> These funds offer you tax benefits under the Income Tax Act.</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<hr>
+
+
+<section class="fd-section">
+  <div class="fd-container">
+    <div class="fd-content">
+
+  <h2 class="mb-4">Key Terms You Must Understand</h2>
+    <ul>
+        <li>
+            <h6>NAV (Net Asset Value)</h6>
+            <p>
+            NAV represents the price of one unit of a mutual fund.
+            It changes daily based on the market value of the fund’s holdings.
+            </p>
+        </li>
+        <li>
+    <h6>CAGR (Compound Annual Growth Rate)</h6>
+    <p>
+      CAGR shows the average annual return of the fund over a specific period.
+      It helps compare long-term performance across funds.
+    </p>
+</li>
+<li>
+    <h6>AUM (Assets Under Management)</h6>
+    <p>
+      AUM is the total amount of money invested by all investors in the fund.
+      A higher AUM often indicates investor trust and stability.
+    </p>
+</li>
+<li>
+    <h6>Expense Ratio</h6>
+    <p>
+      This is the annual fee charged by the fund house to manage the fund.
+      Lower expense ratios are better for long-term investors.
+    </p>
+ </li>
+ <li>
+    <h6>Exit Load</h6>
+    <p>
+      Exit load is a fee charged if you withdraw your investment before a
+      specified period. It encourages long-term investing discipline.
+    </p>
+</li>
+<li>
+    <h6>Minimum Investment</h6>
+    <p>
+      The minimum amount required to start investing in a fund.
+      Mutual funds are accessible even with small amounts.
+    </p>
+    </li>
+</ul>
+
+  <p class="text-muted mt-4">
+    These metrics together help you make informed and confident investment decisions.
+  </p>
+
+</div>
+
+    <!-- Right: Image -->
+    <div class="fd-visual">
+      <img 
+        src="/images/mf.png" 
+        alt="Fixed Deposit Safety Illustration"
+      > 
+     
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="fd-section fd-visual-break">
+  <div class="fd-break-container">
+
+    <h2 class="fd-break-title">
+      How Mutual Fund Investing Works
+    </h2>
+
+    <img
+      src="https://singhalinvestment.com/images/mutual-funds-1.jpg"
+      alt="Mutual Fund investment flow illustration"
+      class="fd-break-image"
+    />
+        
+  </div>
+</section>
+
+<hr>
+
+<section class="fd-section calculator-section">
+  <div class="calc-card">
+    <div class="calc-left">
+      <div class="calc-toggle mb-4" style="display: flex; gap: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+        <button id="btn-sip" class="btn btn-sm btn-dark" onclick="switchMode('sip')">Monthly SIP</button>
+        <button id="btn-lumpsum" class="btn btn-sm btn-outline-dark" onclick="switchMode('lumpsum')">Lumpsum</button>
+      </div>
+
+      <h2 class="calc-title" id="calc-heading">SIP Calculator</h2>
+      
+      <div class="input-group-row">
+        <div class="input-box">
+          <label id="amount-label">Monthly Investment</label>
+          <div class="input-wrapper">
+            <span>₹</span>
+            <input type="number" id="mfAmount" value="5000">
+          </div>
+        </div>
+        
+        <div class="input-box">
+          <label>Expected Return (p.a)</label>
+          <div class="input-wrapper">
+            <input type="number" id="mfRate" value="12">
+            <span>%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group-row">
+        <div class="input-box">
+          <label>Time Period (Years)</label>
+          <div class="input-wrapper">
+            <input type="number" id="mfTenure" value="10">
+            <span>Yrs</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculateMF()">Calculate</button>
+    </div>
+
+    <div class="calc-right">
+      <div class="result-item">
+        <p>Total Value (Est.)</p>
+        <h3 id="mf-maturity">₹11,61,695</h3>
+      </div>
+      <div class="result-item">
+        <p>Est. Returns</p>
+        <h4 id="mf-returns">₹5,61,695</h4>
+      </div>
+      <div class="result-item">
+        <p>Invested Amount</p>
+        <h4 id="mf-invested">₹6,00,000</h4>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- <section>
+    <div class="abc">
+    <a href="/learn/mfs" class="btn btn-dark mt-3">
+        Continue to Stock Market →
+    </a>
+    </div>
+</section>    -->
+
+<div class="mt-5 p-4 border rounded text-center next-step">
+        <h4 class="fw-semibold">Next Step: Stock Market</h4>
+    
+        <p class="text-muted mt-2">
+        Now it’s time to move from safety to strategy and understand the stock market.
+        </p>
+ 
+        <a href="/learn/markets" class="btn btn-dark mt-3">
+            Continue to Stock Market →
+        </a>
+  </div>
+  
+<script>
+let currentMode = 'sip';
+
+function switchMode(mode) {
+  currentMode = mode;
+  const sipBtn = document.getElementById('btn-sip');
+  const lumpsumBtn = document.getElementById('btn-lumpsum');
+  const label = document.getElementById('amount-label');
+  const heading = document.getElementById('calc-heading');
+
+  if (mode === 'sip') {
+    sipBtn.className = 'btn btn-sm btn-dark';
+    lumpsumBtn.className = 'btn btn-sm btn-outline-dark';
+    label.innerText = 'Monthly Investment';
+    heading.innerText = 'SIP Calculator';
+  } else {
+    sipBtn.className = 'btn btn-sm btn-outline-dark';
+    lumpsumBtn.className = 'btn btn-sm btn-dark';
+    label.innerText = 'Lumpsum Investment';
+    heading.innerText = 'Lumpsum Calculator';
+  }
+  calculateMF(); // Re-calculate instantly on switch
+}
+
+function calculateMF() {
+  const P = parseFloat(document.getElementById('mfAmount').value);
+  const annualRate = parseFloat(document.getElementById('mfRate').value);
+  const years = parseFloat(document.getElementById('mfTenure').value);
+  
+  const r = annualRate / 100;
+  let maturityValue = 0;
+  let totalInvested = 0;
+
+  if (currentMode === 'sip') {
+    const i = r / 12;
+    const n = years * 12;
+    // SIP Formula: M = P × ({[1 + i]^n – 1} / i) × (1 + i)
+    maturityValue = P * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+    totalInvested = P * n;
+  } else {
+    // Lumpsum Formula: A = P(1 + r)^t (Compounded annually for simplicity)
+    maturityValue = P * Math.pow((1 + r), years);
+    totalInvested = P;
+  }
+
+  const wealthGained = maturityValue - totalInvested;
+
+  document.getElementById('mf-maturity').innerText = "₹" + Math.round(maturityValue).toLocaleString('en-IN');
+  document.getElementById('mf-returns').innerText = "₹" + Math.round(wealthGained).toLocaleString('en-IN');
+  document.getElementById('mf-invested').innerText = "₹" + Math.round(totalInvested).toLocaleString('en-IN');
+}
+
+// Initial calculation
+calculateMF();
+</script>
