@@ -1,0 +1,35 @@
+
+<% layout("layouts/boilerplate") %>
+
+<section class="container my-5">
+  <h2 class="mb-4">Market</h2>
+
+  <table class="table table-hover align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>Symbol</th>
+        <th>Company</th>
+        <th>Price (₹)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% stocks.forEach(stock => { %>
+        <tr>
+          <td><strong><%= stock.symbol %></strong></td>
+          <td><%= stock.name %></td>
+          <td>₹ <%= stock.price %></td>
+          <td>
+            <a href="/sim/trade/buy/<%= stock.symbol %>" class="btn btn-sm btn-success">
+              Buy
+            </a>
+            <a href="/sim/trade/sell/<%= stock.symbol %>" class="btn btn-sm btn-danger ms-2">
+              Sell
+            </a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</section>
